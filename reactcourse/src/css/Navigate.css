@@ -1,7 +1,7 @@
 /* ======= MAIN NAVBAR CONTAINER ======= */
 .navigate-container {
   width: 100%;
-  background: linear-gradient(90deg, #4b0082, #6a0dad); /* 💜 purple gradient */
+  background: linear-gradient(90deg, #2a004f); /* 💜 purple gradient */
   color: #fff;
   font-family: "Poppins", sans-serif;
   /* position: fixed; */
@@ -230,64 +230,72 @@ span {
   margin-top: -10px; /* 👈 move it slightly up */
 }
 
-/* ========= PERFECT MOBILE NAV VIEW ========= */
-@media (max-width: 650px) {
 
-  .nav-header {
-    width: 100%;
-    padding: 12px 15px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
 
-    /* Premium Purple Background */
-    background: linear-gradient(135deg, #4B00E0 0%, #8A2BE2 100%);
-    box-shadow: 0 3px 12px rgba(0,0,0,0.4);
-    backdrop-filter: blur(10px);
+/* ===== MOBILE NAVBAR FIX ===== */
+@media (max-width: 900px) {
+  .nav-header > div {
+    gap: 18px;
   }
 
   .nav-header h1 {
-    font-size: 24px;
-    font-weight: 700;
-    margin: 0;
+    font-size: 22px;
+    margin-right: 10px;
+  }
+
+  .search {
+    width: 180px;
+    margin-left: 10px;
+  }
+}
+
+@media (max-width: 650px) {
+  .nav-header {
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px 0;
   }
 
   .nav-header > div {
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;        /* Proper line wrap */
+    flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
-    gap: 14px;              /* Perfect spacing */
+    gap: 14px;
   }
 
-  /* Nav Links */
-  .nav-header a {
-    font-size: 16px;
-    font-weight: 500;
-    text-decoration: none;
-    color: white;
+  .nav-header h2 {
+    font-size: 15px;
   }
 
-  /* Search Bar */
   .search {
-    width: 92%;
-    background: white;
-    border-radius: 28px;
-    padding: 8px 15px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin-top: 6px;
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .fa-bookmark {
+    margin-left: 0;
+  }
+
+  .bttn {
+    margin-left: 0;
+  }
+
+  .dropdown {
+    width: 90%;
+    padding: 18px;
+    left: 5%;
+  }
+}
+
+@media (max-width: 450px) {
+  .nav-header h1 {
+    font-size: 20px;
+  }
+
+  .nav-header h2 {
+    font-size: 14px;
   }
 
   .search input {
-    width: 100%;
-    border: none;
-    outline: none;
-    font-size: 15px;
+    font-size: 14px;
   }
 }
